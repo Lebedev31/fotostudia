@@ -1,0 +1,220 @@
+.certificate{
+    min-height: 920px;
+    padding: 82px 100px 92px 100px;
+    h2{
+        @include h2Text;
+    }
+    .certificate__block{
+        margin-top: 82px;
+        width: 100%;
+        background: #F2F4F4;
+        display: flex;
+        border-radius: 25px;
+        .certificate__text{
+            width: 54%;
+            padding-top: 112px;
+            padding-bottom: 113px;
+            padding-left: 120px;
+            h3{
+                color: #C1C1C1;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            h4{
+                @include text;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 67px;
+                letter-spacing: 1px;
+                text-align: left;
+                letter-spacing: 1px;
+            }
+            .certificate__list{
+                margin-top: 52px;
+                padding-left: 0;
+                li{
+                    background: url('../icons/Group\ 17.svg')no-repeat left top;
+                    margin-top: 17.5px;
+                    @include headerText;
+                    list-style-type: none;
+                    padding-left: 25px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .certificate__foto{
+            position: relative;
+            .certificate__img{
+                width: 480px;
+                height: 489px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+               
+            }
+            .certificate__img-center{
+                position: absolute;
+                transform: translateY(-260%) translateX(175%);
+            }
+            .certificate__term{
+                width: 380px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                text-align: center;
+                color: #333333;
+                margin-top: -18px;
+            }
+        }
+    }
+}
+// адаптация
+@media(max-width: 1200px){
+    .certificate{
+        padding-left: 80px;
+        padding-right: 80px;
+        .certificate__block{
+            .certificate__text{
+                h4{
+                    font-size: 36px;
+                }
+            }
+    }}
+}
+
+@media(max-width: 1024px){
+    .certificate{
+        .certificate__block{
+            .certificate__text{
+                padding-left: 50px;
+            }
+        }
+   .certificate__foto{
+      padding: 20px 13px 70px 0px;
+      width: 438px;
+      .certificate__img{
+        width: 438px !important;
+        height: 438px !important;
+        .certificate__img-center{
+            transform: translateY(-230%) translateX(155%);
+        }
+      }
+
+   } 
+}
+}
+@media(max-width: 950px){
+    .certificate{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 60px;
+        h2{
+            font-size: 24px;
+        }
+        .certificate__block{
+            .certificate__text{
+                padding-left: 30px;
+                h4{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 800px){
+    .certificate{
+        min-height: 1000px;
+        padding-left: 15px;
+        padding-right: 15px;
+        .certificate__block{
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            .certificate__text{
+                width: 100%;
+                padding-left: 0;
+                margin: 0 auto;
+                padding-top: 50px;
+                padding-bottom: 0;
+                h3{
+                    text-align: center;
+                }
+                h4{
+                    text-align: center;
+                }
+                .certificate__list{
+                    li {
+                        position: relative;
+                        background: none;
+                        text-align: center;
+                        margin-bottom: 40px;
+                        padding-left: 0;
+                    }
+                    li:before{
+                        content: url('../icons/Group\ 17.svg');
+                        position: absolute;
+                        transform: translateX(-50%) translateY(-120%);
+                        left: 50%;
+                    }
+                } 
+            }
+            .certificate__foto{
+                width: 100%;
+                padding-top: 0;
+                margin: 0 auto;
+                padding-right: 0;
+                .certificate__img{
+                    margin: 0 auto;
+                }
+                .certificate__term{
+                    margin-top: 0;
+                    width: 100%;
+                }
+                .button__certificate{
+                    display: block;
+                    margin: 15px auto;
+                    transform: translateX(-5px);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 460px){
+    .certificate{
+        .certificate__block{
+            min-height: 780px;
+            margin-top: 40px;
+            padding-top: 40px;
+            .certificate__text{
+                .certificate__list{
+                    margin-top: 90px;
+                    margin-bottom: 0;
+                }
+            }
+            .certificate__foto{
+                .certificate__img{
+                    width: 267px !important;
+                    height: 267px !important;
+                    .certificate__img-center{
+                        transform: translateY(-140%) translateX(172%);
+                        width: 50px;
+                        height: 130px;
+                    }
+                }
+                .certificate__term{
+                    font-size: 14px;
+                }
+                .button__certificate{
+                    width: 320px;
+                    height: 56px;
+                }
+            }
+        }
+    }
+}

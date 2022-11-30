@@ -1,0 +1,224 @@
+.price{
+    position: relative;
+    min-height: 1108px;
+    width: 100%;
+    padding: 118px 40px 169px 40px;
+    h2{
+        @include h2Text;
+    }
+    .price__list{
+        margin-top: 80px;
+        display: flex;
+        gap: 22px;
+        justify-content: center;
+        align-items: center;
+        .price__item{
+            height: 654px;
+            width: 399px;
+            padding: 48px 14px 42px 14px;
+            border-radius: 16px;
+            h3{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 22px;
+                text-align: left;
+                @include text;
+            }
+            .price__sum{
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 67px;
+                text-align: left;
+                margin-top: 16px;
+            }
+            .price__location{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 20px;
+                text-align: left;
+                color: #838383;
+            }
+            .price__services{
+                margin-top: 23px;
+                padding-left: 0;
+                list-style: none;
+                li{
+                    @include headerText;
+                    margin-top: 17.5px;
+                    background: url('../icons/check-circle.png') no-repeat left top;
+                    padding-left: 25px;
+
+                   }
+                }
+            h4{
+                margin-top: 32px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22px;
+                text-align: center;
+                @include headerText;
+            }
+            .price__additional{
+                margin-top: 12px;
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                .price__additional-item{
+                    padding: 6px 2px 6px 2px;
+                    min-height: 40px;
+                    border: 2px solid #C2C2C2;
+                    border-radius: 5px;
+                    background: #fff;
+                    text-align: center;
+                    color:#333333;
+                    font-size: 11px;
+                    font-weight: 500;
+                    line-height: 14px;
+                }
+            }
+        
+    }
+    .price__item:nth-child(1){
+        background: #F2F4F4;
+    }
+    .price__item:nth-child(2){
+        background: #F9F4EE;
+
+    }
+    .price__item:nth-child(3){
+        background: #F5D9C6;
+        height: 706px;
+    }
+   
+}
+.price__popap{
+    height: 307px;
+    width: 680px;
+    position: fixed;
+    top: 30vh;
+    padding: 42px 40px 42px 40px;
+    transform: translateX(-50%);
+    left: 50%;
+    border: 1px solid rgb(104, 100, 100);
+    background: #fff;
+    z-index: 5;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    h3{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 43px;
+        text-align: center;
+        @include headerText;
+    }
+    .feed-form{
+        height: 148px;
+        width: 420px;
+        display: block;
+        margin: 32px auto;
+        input{
+            width: 100%;
+        }
+    }
+}
+}
+//адаптация
+@media(max-width: 1265px){
+    .price{
+        h2{
+            font-size: 30px;
+        }
+        padding-top: 100px;
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 100px;
+        min-height: 1574px;
+        .price__list{
+            flex-wrap: wrap;
+            gap: 34px;
+        }
+    }
+}
+@media(max-width: 990px){
+    .price{
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 20px;
+    }
+}
+@media(max-width: 800px){
+    .price{
+        .price__popap{
+            width: 500px;
+            h3{
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media(max-width: 550px){
+    .price{
+        .price__popap{
+            width: 338px;
+            padding: 25px 25px 40px 29px;
+            height: 254px;
+            h3{
+                font-size: 22px;
+                line-height: 26px;
+            }
+            .feed-form{
+                margin-top: 16px;
+                width: 280px;
+                input{
+                    height: 32px;
+                }
+                #sum{
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 465px){
+    .price{
+        padding: 60px 16px 60px 16px;
+        .price__popap{
+            
+            .feed-form{
+                padding-left: 0;
+            }
+            }
+        h2{
+            font-size: 24px;
+        }
+        .price__list{
+            margin-top: 40px;
+            .price__item{
+                width: 343px;
+                height: 673px;
+                .price__additional{
+                    flex-wrap: wrap;
+                    .price__additional-item{
+                        width: 49%;
+                    }
+                    .price__additional-item:nth-child(3){
+                        width: 100%;
+                    }
+                }
+                #retouch{
+                    width: 320px;
+                    height: 56px;
+                }
+            }
+            .price__item:nth-child(3){
+                height: 677px;
+                .price__additional{
+                    .price__additional-item{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

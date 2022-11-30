@@ -1,0 +1,187 @@
+.gallery{
+    position: relative;
+    min-height: 973px;
+    padding-top: 120px;
+    h2{
+      @include h2Text;
+    }
+    .gallery__arroy{
+        transform: translateX(-50%);
+        left: 50%;
+        top: 600px;
+        position: absolute;
+        z-index: 5;
+        width: 90%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        .gallery__next{
+            cursor: pointer;
+        }
+        .gallery__prev{
+            cursor: pointer;
+        }
+    }
+   
+    .gallery__wrapper{
+        position: relative;
+        transition: 0.3s all;
+        margin-top: 117px;
+        display: flex;
+        height: 650px;
+        align-items: center;
+        left: -20px;
+        .gallery__item{
+            height: 544px;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery__item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        }
+        .gallery__navigator{
+            margin: 43px auto 0;
+            height: 12px;
+            width: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .gallery__dots{
+                height: 6px;
+                width: 6px;
+                border-radius: 100%;
+                background-color: #B1B1B1;
+                cursor: pointer;
+            }
+        } 
+
+    }
+//адаптация
+
+@media(max-width: 1024px) {
+    .gallery{
+        padding-top: 100px;
+        min-height: 700px;
+        h2{
+            font-size: 30px;
+        }
+        .gallery__arroy{
+            top: 450px;
+            .gallery__next{
+                height: 64px;
+                width: 64px;
+             }
+             .gallery__next img{
+                 width: 100%;
+                 height: 100%;
+             }
+             .gallery__prev{
+                height: 64px;
+                width: 64px;
+             }
+             .gallery__prev img{
+                width: 100%;
+                height: 100%;
+             }
+         
+        }
+       
+        .gallery__wrapper{
+            margin-top: 80px;
+            height: 483px;
+            .gallery__item{
+                height: 397px;
+            }
+            
+        }
+        .gallery__navigator{
+            margin-top: 32px;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .gallery{
+        .gallery__wrapper{
+            margin-top: 80px;
+            height: 463px;
+            .gallery__item{
+                height: 377px;
+            }
+    }    
+}
+}
+
+@media(max-width: 620px) {
+    .gallery{
+        padding-top: 85px;
+        min-height: 620px;
+        h2{
+            font-size: 24px;
+        }
+        .gallery__arroy{
+            top: 330px;
+        }
+        .gallery__wrapper{
+            margin-top: 70px;
+            height: 383px;
+            margin-top: 30px;
+            .gallery__item{
+                height: 307px;
+            }
+    }    
+}
+}
+@media(max-width: 550px) {
+    .gallery{
+        min-height: 600px;
+        padding-top: 50px;
+        .gallery__arroy{
+            top: 280px;
+        }
+        .gallery__wrapper{
+            height: 333px;
+            .gallery__item{
+                height: 267px;
+            }
+    }    
+}
+}
+@media(max-width: 430px){
+    .gallery{
+        min-height: 522px;
+        padding-top: 60px;
+        h2{
+            font-size: 24px;
+        }
+        .gallery__arroy{
+            top: 250px;
+            .gallery__prev{
+                width: 36px;
+                height: 36px;
+            }
+            .gallery__next{
+                width: 36px;
+                height: 36px;
+            }
+        }
+      
+        .gallery__wrapper{
+            margin-top: 40px;
+            height: 262px;
+            left: -8%;
+            .gallery__item{
+                height: 230px;
+            }
+    } 
+    .gallery__navigator{
+        margin-top: 15.5px;
+    }
+}
+}
+
+

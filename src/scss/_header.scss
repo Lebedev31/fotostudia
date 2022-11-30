@@ -1,0 +1,305 @@
+.header{
+ //position: fixed;
+ width: 100%;
+  z-index: 99;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 99px;
+  padding-right: 100px;
+  background-color: #fff;
+  display: flex;
+  .gamburger{
+    display: none;
+  }
+  .header__nav{
+    margin-top: 7px;
+    width: 581px;
+    height: 20px;
+    .header__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__item{
+            list-style: none;
+            a{
+                @include text;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                text-decoration: none;
+            }
+           
+        }
+        .header__item a:hover{
+            @include oranj;
+        }
+    }
+  }
+.header__contact{
+    display: flex;
+    width: 348px;
+    justify-content: space-between;
+    align-items: center;
+    .header__tube{
+        display: none;
+    }
+    .header__button{
+        height: 31px;
+        width: 196px;
+        border-radius: 10px;
+        border: 2px solid #E97522;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 1px;
+        @include oranj;
+        text-transform: uppercase;
+    }
+    .header__button:hover{
+        color: #fff;
+        background-color:#E97522;
+    }
+    .header__tel{
+        a{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            @include text;
+            text-decoration: none;
+        }  
+    }
+}}
+
+// Адаптация
+@media screen and (max-width: 1285px) {
+   .header{
+    .header__contact{
+        margin-left: 45px;
+    }
+   }
+}
+
+@media screen and(max-width: 1190px){
+    .header{
+        .header__contact{
+            flex-direction: column-reverse;
+            width: 196px;
+            margin-left: 0px;
+            .header__tel{
+                text-align: right;
+                width: 196px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+@media  screen and(max-width: 1120px) {
+    .header{
+        padding-left: 50px;
+        padding-right: 50px;
+        .header__contact{
+            margin-left: 40px;
+        }
+    }
+}
+
+@media screen and(max-width: 1024px){
+    .header{
+        padding-left: 80px;
+        padding-right: 80px;
+        .header__nav{
+            width: 484px;
+            .header__menu{
+                .header__item{
+                    a{
+                        font-size: 12px;
+                    }  
+                }
+            }
+        }
+    .header__contact{
+        width: 162px;
+        margin-left: 0px;
+        .header__tel{
+            width: 100%;
+        }
+        .header__button{
+            width: 100%;
+            font-size: 11px;
+        }
+    }}
+}
+@media screen and(max-width: 950px){
+    .header{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 830px){
+    .header{
+        padding-left: 15px;
+        padding-right: 15px;
+        .header__logo{
+            width: 95px;
+        }
+        .header__nav{
+            width: 450px;
+            .header__menu{
+                .header__item{
+                    a{
+                        font-size: 10px;
+                    }
+                   
+                }
+            }
+        }
+    .header__contact{
+        width: 140px;
+        .header__button{
+            font-size: 10px;
+        }
+        .header__tel{
+            font-size: 12px;
+        }
+    }}
+}
+@media screen and(max-width: 725px){
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+        .header__logo{
+            width: 88px;
+        }
+        .header__nav{
+            width: 430px;
+        }
+    }
+}
+@media screen and(max-width: 680px){
+    .header{
+        .header__contact{
+           flex-direction: row;
+           gap: 30px;
+            .header__tube{
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin-bottom: 15px;
+            }
+            .header__button{
+                display: none;
+            }
+            .header__tel{
+                a{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 20px;
+                }  
+            }
+        }
+        .gamburger{
+            display: block;
+            width: 40px;
+            height: 32px;
+            cursor: pointer;
+            span{
+                transform-origin: 63%;
+                transition: 0.5s all;
+                display: block;
+                background-color:#E97522;
+                height: 3px;
+                margin-top: 5px;
+            }
+        }
+        .header__nav{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            position: absolute;
+            top: 72px;
+            right: 0;
+            height: 0vh;
+            background: #08080873;
+            .header__menu{
+                opacity: 0;
+                flex-direction: column;
+                padding-right: 10px;
+                display: flex;
+                height: 220px;
+                visibility: hidden;
+                .header__item{
+                    align-self: flex-end;
+                    a{
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 20px;
+                        color: #ffff;
+                    } 
+                } 
+                }
+            }
+        }
+    }
+@media screen and(max-width: 500px){
+    .header{
+        padding-top: 8px;
+        padding-right: 16px;
+        padding-left: 16px;
+        .gamburger{
+            span{
+                transform-origin: 67%;}
+
+        }
+        .header__logo{
+            margin-bottom: 14px;
+        }
+        .gamburger{
+            width: 33px;
+            height: 33px;
+        }
+        .header__contact{
+            .header__tel{
+                a{
+                    font-size: 15px;
+                }
+                
+            }
+            .header__tube{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+@media screen and(max-width: 400px){
+    .header{
+        min-height: 37px;
+        padding-top: 15px;
+        .gamburger{
+            margin-bottom: 5px;
+        }
+        .header__nav{
+            top: 45px;
+            .header__menu{
+                height: 164px;
+            }
+        }
+        .header__logo{
+            img{
+                width: 70px;
+                height: 20px;
+            } 
+        }
+        .header__contact{
+            margin-bottom: 5px;
+            gap: 16px;
+            .header__tel{
+                a{
+                   font-size: 14px;
+                }
+               
+            }
+        }
+    }
+}

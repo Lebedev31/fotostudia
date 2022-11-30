@@ -1,0 +1,44 @@
+.video{
+   min-height: 908px;
+   padding-top: 60px;
+   h2{
+    @include h2Text;
+   }
+  .video__youtube{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 80px;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+        outline-width: 0;
+    }
+  }
+}
+// адаптация
+@media screen and(max-width: 1024px) {
+    .video{
+        min-height: auto;
+        padding-top: 0px;
+        h2{
+            font-size: 30px;
+        }
+    }
+}
+@media screen and(max-width: 620px) {
+    .video{
+        h2{
+            font-size: 24px;
+        }
+        .video__youtube{
+            margin-top: 30px;
+        }
+    }
+}

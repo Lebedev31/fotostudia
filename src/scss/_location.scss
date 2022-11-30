@@ -1,0 +1,279 @@
+.location{
+   min-height: 720px;
+   padding-top: 60px;
+   position: relative;
+   .swiper{
+     display: none;
+   }
+   h2{
+    @include h2Text;
+   }
+   .location__arrow{
+     visibility: hidden;
+     width: 95%;
+     position: absolute;
+     display: flex;
+     top: 315px;
+     left: 49.6%;
+     transform: translateX(-50%);
+     justify-content: space-between;
+     .location__left{
+        visibility: visible;
+        width: 73px;
+        height: 73px;
+        border: none;
+        background: rgba(0,0,0,0);
+     }
+     .location__right{
+        visibility: visible;
+        width: 73px;
+        height: 73px;
+        border: none;
+        background: rgba(0,0,0,0);
+     }
+     .location__left img{
+        height: 100%;
+     }
+     .location__right img{
+        height: 100%;
+     }
+   }
+   
+   .slider{
+      position: relative;
+      height: 349px;
+      margin: 71px auto 0;
+      width: 100%;
+      gap: 5%;
+             .slide{
+                position: absolute;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 5%;
+                transition: 0.6s all ease;
+                 .slider__item{
+                    position: relative;
+                    width: 32%;
+                    height: 349px;
+                    cursor: pointer;
+                    .slider__hover{
+                        position: absolute;
+                        font-size: 14px;
+                        opacity: 0;
+                        color: #fff;
+                        bottom: 0;
+                        width: 100%;
+                        height: 20%;
+                        text-align: center;
+                    }
+                    .slider__hover:hover{
+                        background:  rgba(0,0,0,0.5);
+                        opacity: 1;
+                    }
+
+                    }
+                    .slider__item img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+.feed-form{
+    height: 461px;
+    #location{
+        width: 388px;  
+      option{
+        margin: 16px;
+        padding: 0px 12px 0px 12px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
+}
+.modal1{
+   height: 648px;
+   top: 15px;
+}
+    }
+//адаптация
+@media screen and(max-width: 1024px){
+    .location{
+        min-height: 620px;
+        .location__arrow{
+            top: 270px;
+            height: 64px;
+            .location__left{
+                width: 64px;
+                height: 64px;
+            }
+             .location__right{
+                width: 64px;
+                height: 64px;
+             }
+        }
+        .slider{
+            height: 249px;
+            .slide{
+                height: 249px;
+                .slider__item{
+                    height: 100%;
+                }
+            }
+        }
+    }
+   
+  #popap-location{
+        height: 565px;
+    }
+}
+@media screen and(max-width: 850px){
+    .location{
+        #popap-location {
+            height: 510px;
+        }
+
+    }
+}
+@media screen and(max-width: 770px) {
+    .location{
+        .slider{
+            height: 190px;
+            .slide{
+                height: 100%;
+            }
+        }
+        .location__arrow{
+            top: 250px;
+            .location__left{
+                height: 50px;
+                width: 50px;
+            }
+            .location__right{
+                height: 50px;
+                width: 50px;
+            }
+        }
+        #popap-location{
+            height: 460px;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .location{
+        .location__arrow{
+            left: 49.5%;
+        }
+    }
+}
+@media screen and(max-width: 650px) {
+    .location{
+        .slider{
+            display: none;
+        }
+        .location__arrow{
+            display: none;
+        }
+        .swiper {
+            width: 540px;
+            height: 480px;
+            display: block;
+            .swiper-button-prev::after{
+                display: none;
+            }
+            .swiper-button-next::after{
+              display: none;
+            }
+            .swiper-slide img{
+               width: 100%;
+               height: 100%;
+               cursor: pointer;
+            }
+            .swiper-button-prev{
+                background-image: url('../icons/left.png');
+                width: 70px;
+                height: 70px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transform: translateX(-25%);
+            }
+            .swiper-button-next{
+                background-image: url('../icons/right.png');
+                width: 70px;
+                height: 70px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transform: translateX(25%);
+            }
+          }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .location{
+        min-height: 600px;
+        h2{
+            font-size: 24px;
+        }
+        .swiper{
+            margin-top: 30px;
+            width: 480px;
+            height: 390px;
+        }
+        #popap-location{
+            height: 430px;
+        }
+    }
+}
+@media screen and(max-width: 550px) {
+    .location{
+        padding-top: 20px;
+       .swiper{
+          width: 430px;
+          height: 340px;
+       }
+    }
+}
+@media screen and(max-width: 466px){
+    .location{
+        padding-top: 10px;
+        min-height: 580px;
+        h2{
+            font-size: 24px;
+        }
+        .swiper{
+            width: 370px;
+            height: 290px;
+            .swiper-button-prev{
+                width: 50px;
+                height: 50px;
+            }
+            .swiper-button-next{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        #popap-location{
+            height: 540px;
+        }
+        .button__location{
+            margin-top: 32px;
+        }
+    }
+}
+@media screen and(max-width: 390px) {
+    .location{
+        min-height: 550px;
+        .swiper{
+            width: 340px;
+            height: 270px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@mixin oranj  {
+    color: #E97522;
+}
+
+@mixin ker {
+    color: #F5F5F5;
+}
+
+@mixin headerText {
+    color: #333333;
+}
+
+@mixin text {
+    color: #4A4A4A;
+}
+
+@mixin h2Text{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+    text-align: center;
+    @include headerText;
+}

@@ -1,0 +1,41 @@
+.sent{
+    top: 30%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 622px;
+    height: 271px;
+    background: blanchedalmond;
+    border-radius: 15px;
+    padding: 90px 90px 90px 90px;
+    z-index: 5;
+    h2{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 43px;
+        text-align: center;
+        color: #4A4A4A;
+    }
+}
+
+// адаптация
+@media(max-width: 800px){
+    .sent{
+        padding: 50px 50px 50px 50px;
+        width: 400px;
+        height: 190px;
+        h2{
+            font-size: 28px;
+        }
+    }
+}
+@media(max-width: 540px) {
+    .sent{
+        padding: 20px 20px 20px 20px;
+        width: 280px;
+        height: 160px;
+        h2{
+            font-size: 24px;
+        }
+    }
+}
